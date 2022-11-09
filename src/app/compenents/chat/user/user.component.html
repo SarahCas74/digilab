@@ -1,0 +1,64 @@
+<!-- Mon profil -->
+<div *ngIf="userInfos">
+  <img mat-card-avatar [src]="userInfos.avatar" alt="">
+  {{userInfos.firstName}}
+  {{userInfos.lastName}}
+</div>
+
+<!-- Search Bar -->
+<div class="search_box">
+  <form [formGroup]="searchBar">   
+    <input type="search" placeholder="Recherchez un contact..." class="search" formControlName="Search" />
+  </form>
+</div>
+
+<!-- Slide -->
+<mat-slide-toggle [(ngModel)]="isChecked">{{isChecked ? 'Tous les contacts': 'Amis'  }}
+</mat-slide-toggle>
+
+<!-- Liste -->
+<div class="centrerCard">
+  <div *ngIf="isChecked" class="generale">
+    <div *ngFor="let user of users" class="userList">
+      <mat-card>
+
+
+        <div class="nomPrenomAvatar">
+          <mat-icon [ngClass]="user.online? 'pastilleVerte' : 'pastilleRouge'" aria-label="En ligne" class="pastille">radio_button_checked</mat-icon>
+
+          <img mat-card-avatar [src]="user.avatar" alt="">
+          {{ user.firstName }}
+          {{ user.lastName }}
+        </div>
+
+        <div class="buttons">
+          <mat-icon (click)="onAddFriend(user)" style="cursor: pointer;" class="item" aria-label="Ajouter en ami">person_add</mat-icon>
+        </div>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="centrerCard">
+  <div *ngIf="!isChecked" class="generale">
+    <div *ngFor="let friend of friends" class="userList">
+      <mat-card>
+
+        
+        <div class="nomPrenomAvatar">
+          <mat-icon [ngClass]="friend.online? 'pastilleVerte': 'pastilleRouge'">radio_button_checked</mat-icon>
+            <img mat-card-avatar [src]="friend.avatar" alt="">
+          {{ friend.firstName }}
+          {{ friend.lastName }}
+        </div>
+
+        <div class="buttons">
+          <mat-icon (click)="onOpenDialog(friend)" style="cursor: pointer" aria-label="Chatter avec cet ami" class="itemChat">sms</mat-icon>
+          <span class="fas fa-user-times itemSupp" (click)="onRemoveFriend(friend)" style="cursor: pointer;color:red " aria-label="Supprimer cet ami"></span>
+        </div>
+
+      </mat-card>
+    </div>
+  </div>
+</div>

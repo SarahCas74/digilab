@@ -1,0 +1,117 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1_register{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 300px;
+}
+
+.h1 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  color: white;
+  text-align: center;
+}
+
+//formulaire
+
+// div.main {
+
+//   // min-height: 95vh;
+//   // background-color: #141f26;
+//   // padding: 10% 0;
+// }
+
+
+
+.container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+margin-left: 50px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+
+
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  color: #9ed0eb;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+mat-label{
+  color: #9ed0eb;
+}
+
+.row100 {
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #9ed0eb;
+}
+
+input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #141f26;
+  text-transform: none;
+}
+
+.form-control:focus, .form-control[_ngcontent-wsk-c141]:focus {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}

@@ -1,0 +1,19 @@
+<div class="titre">
+<h1>Bienvenue dans notre dossier partagé</h1>
+<p>Vous pourrez ici partager vos dossiers clôturés qui pourront aider notre communauté, et consulter les dossiers de nos adhérents </p>
+</div>
+
+<div class="toutCentrer">
+<div class="button">
+      <button mat-raised-button (click)="openDialog()" color="primary"><mat-icon>create_new_folder</mat-icon></button>
+</div>
+
+<div class="tousLesDossiers">
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°1</p></div>
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°2</p></div>
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°3</p></div>
+<div *ngFor="let dir of _directories">
+      <div class="dossier"><mat-icon >folder</mat-icon><p>{{dir.data.nom}}</p></div>
+</div>
+</div>
+</div>

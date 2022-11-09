@@ -1,0 +1,82 @@
+<div style="background-image: url('assets/image/aerial-view-of-business-team.jpg');
+background-repeat: 'no-repeat';
+  background-position: 'center';
+ background-size: 'cover';
+  width: '100%';
+  height: '100vh'" class="login">
+
+    <div class="h1_register">
+
+        <div class="h1">
+            <h1 mat-dialog-title>Bienvenue sur notre plateforme d'entraide <br> dédiée aux métiers des RH</h1>
+        </div>
+
+        <div class="register">
+            <p>Vous n'avez pas encore de compte ?</p>
+            <p>Cliquez <a routerLink="register">ici</a> pour nous rejoindre</p>
+        </div>
+
+    </div>
+
+
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="formulaire">
+
+          
+
+                <div class="container">
+
+                    <div class="titre_glitch">
+                        <div class="glitch">
+                            <div class="line">
+                                <h2>Connexion</h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row100">
+
+                        <div class="col">
+                            <div class="inputBox">
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label for="">E Mail</mat-label>
+                                    <input matInput type="email" class="form-control" formControlName="email">
+                                </mat-form-field>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="inputBox">
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label for="">Mot de passe</mat-label>
+                                    <input matInput type="password" class="form-control" formControlName="password">
+                                </mat-form-field><br>
+                                <p> <a href="" style="cursor:pointer">Mot de passe oublié</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row100">
+                        <div class="col">
+                            <div mat-dialog-actions>
+                                <!-- <a routerLink="overview"> -->
+                                <button style="margin-top: 30px;"class="button" mat-raised-button type="submit" color="primary"
+                                    [disabled]="userForm.invalid" mat-button cdkFocusInitial>Connexion</button>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+          
+
+        </form>
+
+
+    </div>
+

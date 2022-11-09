@@ -1,0 +1,111 @@
+.h1, .h2{
+ text-align: center;
+ margin-top: 20px;
+ color: #9ed0eb;
+}
+
+p {
+  color: white;
+}
+
+.centrerFormulaire{
+  display: flex;
+  justify-content: center;
+}
+.formulaire{
+display: flex;
+flex-direction: row;
+}
+
+label{
+  margin-top: 10px;
+}
+
+.bloc1, .bloc2, .bloc3{
+  width: 300px;
+  margin-right: 30px;
+}
+
+.telephone{
+  display: flex;
+flex-direction: row;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+//formulaire
+.container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1000px;
+  background-color:  rgba(255, 255, 255, 0.05);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(22px);
+margin-left: 50px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+
+
+}
+
+mat-label{
+  color: #9ed0eb;
+}
+
+.row100 {
+  position: relative;
+  width: 100%;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  margin: 30px 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #9ed0eb;
+  margin-bottom: 30px;
+}
+
+input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #141f26;
+  text-transform: none;
+}
+
+.form-control:focus, .form-control[_ngcontent-wsk-c141]:focus {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}

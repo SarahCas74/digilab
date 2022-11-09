@@ -1,0 +1,65 @@
+<!-- CODE FOUAD -->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" #sidenav2 opened="false" mode="side" position="end">
+    <app-weather></app-weather>
+  </mat-sidenav>
+
+  <mat-sidenav class="sidenav" #sidenav3 opened="false" mode="side" position="start">
+    <div class="col-md-4 sideBarLeft">
+      <div mat-dialog-actions>
+        <a routerLink="/overview/directory">
+          <button mat-raised-button type="submit" color="primary">
+            Accédez aux dossiers paratagés
+          </button>
+        </a>
+      </div>
+
+      <div mat-dialog-actions>
+        <a routerLink="/overview/chat">
+          <button mat-raised-button type="submit" color="primary">
+            Accédez au Chat
+          </button>
+        </a>
+      </div>
+
+      <div mat-dialog-actions>
+        <a routerLink="/overview/profil">
+          <button mat-raised-button type="submit" color="primary">
+            Accédez au Profil
+          </button>
+        </a>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav2.toggle()" (click)="sidenav3.toggle()">menu</mat-icon>
+    </button>
+    <mat-toolbar>
+      <img src="assets/image/logo.jpg" alt="" />
+
+      <form [formGroup]="searchSkillForm">
+        <div class="search_skill">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Métier</mat-label>
+
+            <div style="display: flex; justify-content: center">
+              <mat-icon>search</mat-icon>
+            </div>
+
+            <input matInput type="text" placeholder="Recherchez ici un métier..." [matAutocomplete]="auto"
+              class="search" formControlName="Search" />
+
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,10 @@
+input {
+  margin: 10px;
+  width: 90%;
+}
+
+.envoyer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=chatroom.component.css.map */

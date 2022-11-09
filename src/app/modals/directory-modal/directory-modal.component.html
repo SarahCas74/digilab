@@ -1,0 +1,29 @@
+<p>Merci de bien vouloir remplir ce formulaire pour créer un dossier</p>
+<form [formGroup]="directoryForm" (ngSubmit)="onSubmit()" class="formulaire">
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Nom du dossier</mat-label>
+      <textarea matInput type="text" class="form-control" formControlName="nom"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Chemin</mat-label>
+      <input matInput type="text" class="form-control" formControlName="chemin">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Description</mat-label>
+      <input matInput type="text" class="form-control" formControlName="description">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Annuler</button>
+    <button mat-button type="submit" [disabled]="directoryForm.invalid" cdkFocusInitial>Valider</button>
+  </div>
+</form>

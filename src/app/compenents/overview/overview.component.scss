@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBarRight {
+  width: 25%;
+  height: calc(100vh - 60px);
+  background: rgb(230, 230, 255);
+}
+
+.sideBarLeft {
+  width: 10%;
+  height: calc(100vh - 60px);
+  background-color: rgb(230, 230, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.mainContent {
+  width: 65%;
+  height: calc(100vh - 60px);
+  text-align: center;
+  background-color: rgb(230, 230, 255);
+}
+
+.navBar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(230, 230, 255);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+img {
+  width: 13%;
+  height: 60px;
+}
+
+
+
+
+/* on génère un élément :after lors du survol et du focus :*/
+//BULLE
+.picto-item:hover:after,
+.picto-item:focus:after {
+  content: attr(aria-label);
+  /* on affiche aria-label */
+  position: absolute;
+  top: 1em;
+  left: 110%;
+  transform: translateX(-0%);
+  /* on centre horizontalement  */
+  z-index: 1;
+  /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;
+  /* on interdit le retour à la ligne*/
+  padding: 5px 14px;
+  background: #3797a3;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.picto-itemlogout:hover:after,
+.picto-itemlogout:focus:after {
+  content: attr(aria-label);
+  /* on affiche aria-label */
+  position: absolute;
+  top: 1em;
+  right: 110%;
+  transform: translateX(-0%);
+  /* on centre horizontalement  */
+  z-index: 1;
+  /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;
+  /* on interdit le retour à la ligne*/
+  padding: 5px 14px;
+  background: #3797a3;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+
+}
+
+[aria-label]:focus {
+  outline: none;
+}
+
+
+.picto-item,
+.picto-itemlogout {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .1em;
+  width: 1.2em;
+  height: 1.2em;
+  color: #413219;
+  background: rgb(230, 230, 255);
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+
+
+}
+
+.picto-item {
+  margin: 10px;
+}
+
+
+
+.picto-item,
+.picto-itemlogout {
+  position: relative;
+}

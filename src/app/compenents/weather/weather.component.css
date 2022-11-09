@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+.meteo {
+  height: 300px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  background-color: rgb(230, 230, 255);
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+}/*# sourceMappingURL=weather.component.css.map */

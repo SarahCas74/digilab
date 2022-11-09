@@ -1,0 +1,51 @@
+<div class="recapDesInfos">
+
+  <span *ngIf="data.infos.lastName">
+    Votre Nom: <i>{{ data.infos.lastName }}</i>
+  </span>
+
+  <span *ngIf="data.infos.firstName">
+    Votre Prenom: <i>{{ data.infos.firstName }}</i>
+  </span>
+
+  <span *ngIf="data.infos.username">
+    Votre Pseudo: <i>{{ data.infos.username }}</i>
+  </span>
+
+  <span *ngIf="data.infos.dateOfBirth">
+    Votre Date de naissance : <i>{{ data.infos.dateOfBirth }}</i>
+  </span>
+
+  <span *ngIf="data.infos.dialCode">
+    Votre indicatif de téléphone : <i>{{ data.infos.dialCode }}</i>
+  </span>
+
+  <span *ngIf="data.infos.phoneNumber">
+    Votre numéro de téléphone: <i>{{ data.infos.phoneNumber }}</i>
+  </span>
+
+  <span *ngIf="data.infos.street">
+    Votre adresse: <i>{{ data.infos.street }}</i>
+  </span>
+
+  <span *ngIf="data.infos.zipCode">
+    Votre code postal: <i>{{ data.infos.zipCode }}</i>
+  </span>
+
+  <span *ngIf="data.infos.city">
+    Votre ville: <i>{{ data.infos.city }}</i>
+  </span>
+
+  <span *ngIf="data.infos.country">
+    Votre pays: <i>{{ data.infos.country }}</i>
+  </span>
+
+  <span *ngIf="data.infos.skills">
+    Votre ou vos compétences: <i>{{ data.infos.skills }}</i>
+  </span>
+  
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="closeModal()">Valider</button>
+</div>

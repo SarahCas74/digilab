@@ -1,0 +1,64 @@
+<section class="container-fluid">
+  
+    <div class="row">
+
+          <!-- NAVBAR -->
+          <div class="col-md-4 navBar">
+            
+            <img src="/assets/image/logo.jpg" alt="">
+       
+            <div mat-dialog-actions class="deconnexion" class="picto-itemlogout" aria-label="déconnexion">
+              <button mat-raised-button type="submit" color="primary" (click)="onClick()"><mat-icon>exit_to_app</mat-icon></button>
+            </div>
+          </div>
+
+          <div class = "colonne">
+        <!-- barre de gauche -->
+        <div class="col-md-4 sideBarLeft">
+            
+
+
+            <div mat-dialog-actions>
+                <a routerLink="directory" class="picto-item" aria-label="dossiers partagés">
+                <button mat-raised-button type="submit" color="primary">	<mat-icon>folder_shared</mat-icon></button>
+                  </a>
+              </div>
+
+              <div mat-dialog-actions>
+                <a routerLink="chat" class="picto-item" aria-label="chat" >
+                <button mat-raised-button type="submit" color="primary" ><mat-icon> chat</mat-icon></button>
+                  </a>
+              </div>
+
+              <div mat-dialog-actions>
+                <a routerLink="profil"class="picto-item" aria-label="profil">
+                <button mat-raised-button type="submit" color="primary"><mat-icon>account_circle</mat-icon></button>
+                  </a>
+              </div>
+
+              <div mat-dialog-actions>
+                <a routerLink="/finder" class="picto-item" aria-label="finder">
+                <button mat-raised-button type="submit" color="primary"><mat-icon>search</mat-icon></button>
+                  </a>
+              </div>
+
+
+
+        </div>
+        
+    
+        <!-- Main Content-->
+        <div class="col-md-4 mainContent">
+           
+           <router-outlet></router-outlet>
+            
+        </div>
+
+<!-- barre de droite -->
+            <div class="col-md-4 sideBarRight" >
+                <app-weather></app-weather>
+            </div>
+          </div>
+
+        </div>
+</section>

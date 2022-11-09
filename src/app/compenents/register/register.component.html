@@ -1,0 +1,216 @@
+<div style="background-image: url('assets/image/aerial-view-of-business-team.jpg');
+background-repeat: 'no-repeat';
+  background-position: 'center';
+ background-size: 'cover';
+  width: '100%';
+  height: '100vh'" class="register">
+
+
+  <div class="centrerFormulaire">
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="formulaire">
+    
+
+      <div class="container">
+
+        <div class="h1">
+          <h1 mat-dialog-title>Formulaire d'inscription</h1>
+        </div>
+      
+        <div class="h2">
+          <h2>Rejoignez-nous !</h2>
+          <h3>Merci de bien vouloir remplir tous les champs</h3>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="bloc1">
+
+              <div class="form-group">
+                <div mat-dialog-content>
+                  <div class="inputBox">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label for="">Nom</mat-label>
+                      <input matInput type="text" class="form-control" formControlName="lastName">
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Prénom</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="firstName">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Date de naissance</mat-label>
+                    <!-- [(ngModel)]="dateOfBirth"  -->
+                    <input type="date" matInput class="form-control" formControlName="dateOfBirth">
+                  </mat-form-field>
+                  <!-- {{dateOfBirth|age}} -->
+                </div>
+              </div>
+
+
+
+              <div class="telephone">
+                <div class="form-group" style="width:20px; margin-right: 50px;">
+                  <div class="inputBox">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label for="">+33</mat-label>
+                      <input class="prefix" matInput type="text" class="form-control" formControlName="dialCode">
+                    </mat-form-field>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="inputBox">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label for="">Téléphone</mat-label>
+                      <input matInput type="text" class="form-control" formControlName="phoneNumber">
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="bloc2">
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Adresse</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="street">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Code Postal</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="zipCode">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Ville</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="city">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Pays</mat-label>
+                    <input matInput type="text" placeholder="Ecris un pays" [matAutocomplete]="auto"
+                      formControlName="country">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="bloc3">
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Pseudo</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="username">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">E Mail</mat-label>
+                    <input matInput type="email" class="form-control" formControlName="email">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Mot de passe</mat-label>
+                    <input matInput type="password" class="form-control" formControlName="password">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="inputBox">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label for="">Confirmer le Mot de passe</mat-label>
+                    <input matInput type="password" class="form-control" formControlName="confirmPassword">
+                    <mat-error *ngIf="errorPass">
+                      Vos mots de passe ne correspondent pas
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <button mat-raised-button type="button" (click)="addSkills()">
+                Ajouter des compétences
+                <mat-icon>add_circle</mat-icon>
+              </button>
+
+
+              <ng-container formArrayName="skills">
+                <ng-container *ngFor="let skillForm of skills.controls;  index as i ">
+
+                  <div class="form-group">
+                    <div class="inputBox">
+       
+                        <mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label for="">Compétences</mat-label>
+                          <input matInput type="text" class="form-control" [formControlName]="i">
+                        </mat-form-field>
+                 
+                    </div>
+                    <mat-icon class="delete-btn" (click)="deleteSkill(i)">delete_forever</mat-icon>
+                  </div>
+
+                </ng-container>
+              </ng-container>
+
+              <div mat-dialog-actions>
+                <button mat-raised-button type="submit" color="primary" [disabled]="userForm.invalid" mat-button
+                  cdkFocusInitial>Créer mon compte</button>
+              </div>
+
+              <a routerLink="/">
+                <button mat-raised-button type="button" style="margin-top:10px">
+                  Retour
+                </button>
+
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

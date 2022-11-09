@@ -1,0 +1,31 @@
+
+<p>Merci de bien vouloir remplir ce formulaire pour afficher la météo de la ville souhaitée</p>
+<form [formGroup]="weatherForm" (ngSubmit)="onSubmit()" class="formulaire">
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Rue</mat-label>
+      <textarea matInput type="text" class="form-control" formControlName="rue"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Code Postal</mat-label>
+      <input matInput type="text" class="form-control" formControlName="cp">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content class="form-group">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="">Ville</mat-label>
+      <input matInput type="text" class="form-control" formControlName="ville">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Annuler</button>
+    <button mat-button type="submit" [disabled]="weatherForm.invalid" cdkFocusInitial (click)="showSpinner = !showSpinner">Valider</button>
+    <mat-spinner matSuffix *ngIf="showSpinner" mode="indeterminate" diameter="17"></mat-spinner>
+  </div>
+</form>

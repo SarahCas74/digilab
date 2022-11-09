@@ -1,0 +1,16 @@
+<p>Entrer en contact avec :</p>
+
+<mat-card>
+  <div class="generale">
+    <img mat-card-avatar [src]="infosUser.photo" alt="">
+      <div>{{infosUser.prenom}}</div>
+      <div>{{infosUser.nom}}</div>
+    </div>
+
+</mat-card>
+
+
+<div mat-dialog-actions>
+  <button mat-button type="button" (click)="onClick()" color="primary">Je confirme</button>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+</div>

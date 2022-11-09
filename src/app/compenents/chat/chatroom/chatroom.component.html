@@ -1,0 +1,51 @@
+
+<div class="container" style="height: calc(100vh - 146px); overflow-y: auto; padding-top: 20px;background-image: url('assets/image/bg_chatroom.jpg');
+    background-repeat: 'no-repeat';
+      background-position: 'center';
+     background-size: 'cover';
+      width: '100%';" *ngIf="data">
+  <div *ngFor="let msg of allMessages" style="display: flex; flex-direction: column">
+
+
+    <div *ngIf=" msg.userID.username == data.username" class="align-self-start" style="align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;">
+
+      <span style=" background-color: purple; margin:5px; color:white; padding:5px; border-radius: 5%;">
+        {{ msg.content }}
+      </span>
+
+      <div style="margin-bottom:10px">
+        {{ msg.date | date: "hh:mm" }}
+      </div>
+
+    </div>
+
+
+
+
+    <div class="align-self-end" *ngIf="msg.userID.username!==data.username " style="align-items: end;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;">
+
+      <span style="background-color: blue; margin:5px; color:white; padding:5px; border-radius: 5%;">
+        {{ msg.content }}
+
+      </span>
+      <div style="margin-bottom:10px; align-self:self-end">
+        {{ msg.date | date: "hh:mm" }}
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="envoyer" *ngIf="data">
+  <input matInput type="text" placeholder="Fait deviner une blague..." [formControl]="message"
+    (keypress)="onSendMessage($event)" />
+  <mat-icon (click)="onSend()">send</mat-icon>
+</div>

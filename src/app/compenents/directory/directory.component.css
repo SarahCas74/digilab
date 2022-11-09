@@ -1,0 +1,23 @@
+.titre {
+  text-align: center;
+}
+
+.dossier {
+  margin: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button {
+  margin: 50px;
+}
+
+.tousLesDossiers {
+  display: flex;
+  flex-direction: row;
+}
+
+.toutCentrer {
+  justify-content: center;
+  display: flex;
+}/*# sourceMappingURL=directory.component.css.map */

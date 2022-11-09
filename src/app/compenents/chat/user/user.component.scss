@@ -1,0 +1,131 @@
+h1 {
+    text-align: center;
+}
+
+.profil {
+    display: flex;
+}
+
+.search_box input {
+    height: 30px;
+    width: 250px;
+    padding: 0 10px;
+    margin: 10px 0 10px 0;
+}
+
+.centrerCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    margin: 5px;
+}
+
+p {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mat-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: solid 1px rgb(247, 118, 122);
+    margin: 10px;
+    background-color: rgb(230, 230, 255);
+
+}
+
+.mat-icon {
+    margin: 0px 20px 0 20px;
+    color: rgb(63, 81, 181);
+}
+
+.pastilleVerte {
+    color: green;
+    margin: 0;
+}
+
+.pastilleRouge {
+    color: red;
+    margin: 0;
+}
+
+
+.item:hover:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 2,5em;
+    right: 9%;
+    transform: translateX(46%);
+    z-index: 1;
+    padding: 5px 14px;
+    background: #3797a3;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.itemSupp:hover:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 5em;
+    right: 9%;
+    transform: translateX(57%);
+    z-index: 1;
+    padding: 5px 14px;
+    background: #3797a3;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.itemChat:hover:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 5em;
+    right: 9%;
+    transform: translateX(-60%);
+    z-index: 1;
+    padding: 5px 14px;
+    background: #3797a3;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.pastille:hover:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 5em;
+    right: 9%;
+    transform: translateX(-60%);
+    z-index: 1;
+    padding: 5px 14px;
+    background: #3797a3;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+

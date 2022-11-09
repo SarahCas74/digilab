@@ -1,0 +1,29 @@
+.chatCompenent{
+    display: flex;
+}
+
+
+
+.userList{
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.topChat{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.chatCompenent{
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-x: hidden;
+}

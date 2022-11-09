@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+}
+
+.profil {
+  display: flex;
+}
+
+.search_box input {
+  height: 30px;
+  width: 250px;
+  padding: 0 10px;
+  margin: 10px 0 10px 0;
+}
+
+.centrerCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  margin: 5px;
+}
+
+p {
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: solid 1px rgb(247, 118, 122);
+  margin: 10px;
+  background-color: rgb(230, 230, 255);
+}
+
+.mat-icon {
+  margin: 10px 20px 0 20px;
+  color: rgb(63, 81, 181);
+}/*# sourceMappingURL=user.component.css.map */
