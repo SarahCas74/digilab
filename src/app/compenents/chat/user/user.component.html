@@ -8,7 +8,7 @@
 <!-- Search Bar -->
 <div class="search_box">
   <form [formGroup]="searchBar">   
-    <input type="search" placeholder="Recherchez un contact..." class="search" formControlName="Search" />
+    <input matInput type="search" placeholder="Recherchez un contact..." class="search" formControlName="Search" />
   </form>
 </div>
 
@@ -42,7 +42,7 @@
 
 <div class="centrerCard">
   <div *ngIf="!isChecked" class="generale">
-    <div *ngFor="let friend of friends" class="userList">
+    <div *ngFor="let friend of friends" class="userList" [matBadge]="friend.nbMsg" matBadgePosition="after" matBadgeColor="accent">
       <mat-card>
 
         

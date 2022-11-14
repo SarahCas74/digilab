@@ -51,3 +51,57 @@ justify-content: center;
     }
   }
 
+/* on génère un élément :after lors du survol et du focus :*/
+//BULLE
+.picto-item:hover:after,
+.picto-item:focus:after {
+  content: attr(aria-label);
+  /* on affiche aria-label */
+  position: absolute;
+  top: 1em;
+  left: 110%;
+  transform: translateX(-0%);
+  /* on centre horizontalement  */
+  z-index: 1;
+  /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;
+  /* on interdit le retour à la ligne*/
+  padding: 5px 14px;
+  background: #3797a3;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+
+
+[aria-label]:focus {
+  outline: none;
+}
+
+
+.picto-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .1em;
+  width: 1.2em;
+  height: 1.2em;
+  color: #413219;
+  background: rgb(134, 134, 255);
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+
+
+}
+
+.picto-item {
+  margin: 10px;
+}
+
+
+
+.picto-item {
+  position: relative;
+}

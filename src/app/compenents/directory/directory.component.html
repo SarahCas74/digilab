@@ -9,11 +9,12 @@
 </div>
 
 <div class="tousLesDossiers">
-<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°1</p></div>
-<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°2</p></div>
-<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°3</p></div>
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°1</p><p>Description : </p></div>
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°2</p><p>Description :</p></div>
+<div class="dossier"><mat-icon >folder</mat-icon><p>Dossier n°3</p><p>Description :</p></div>
 <div *ngFor="let dir of _directories">
-      <div class="dossier"><mat-icon >folder</mat-icon><p>{{dir.data.nom}}</p></div>
+      <div class="dossier"><mat-icon >folder</mat-icon><p>{{dir.data.nom}}</p><p>Description : {{dir.data.description}}</p></div>
+      
 </div>
 </div>
 </div>

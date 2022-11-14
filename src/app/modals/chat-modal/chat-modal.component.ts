@@ -30,7 +30,7 @@ user!:any
   onClick(): void {
 //Pour fermer la modal : mat dialog ref et pour récupérer les infos
     this._dialogRef.close(this.infosUser)
-    this.route.navigate(['/overview/chat/chatroom'])
+    this.route.navigate(['/overview/chat/'])
 
   }
 

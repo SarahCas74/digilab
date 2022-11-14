@@ -87,7 +87,10 @@ export class ChatroomComponent implements OnInit {
 
 
     this._userService.getMsgSubject().subscribe((msgRecu: any) => {
-      this.snackBar.open(`Vous avez reçu un message de ${msgRecu.userID.username}`, 'ok')
+      if (this.data.username !== msgRecu.userID.username) {
+        
+        this.snackBar.open(`Vous avez reçu un message de ${msgRecu.userID.username}`, 'ok')
+      }
 
       this.messageDirectReceived.content = msgRecu.content
 

@@ -8,28 +8,22 @@
   <mat-sidenav class="sidenav" #sidenav3 opened="false" mode="side" position="start">
     <div class="col-md-4 sideBarLeft">
       <div mat-dialog-actions>
-        <a routerLink="/overview/directory">
-          <button mat-raised-button type="submit" color="primary">
-            Accédez aux dossiers paratagés
-          </button>
-        </a>
-      </div>
+        <a routerLink="/overview/directory" class="picto-item" aria-label="dossiers partagés">
+          <button mat-raised-button type="submit" color="primary">	<mat-icon>folder_shared</mat-icon></button>
+            </a>
+        </div>
 
-      <div mat-dialog-actions>
-        <a routerLink="/overview/chat">
-          <button mat-raised-button type="submit" color="primary">
-            Accédez au Chat
-          </button>
-        </a>
-      </div>
+        <div mat-dialog-actions>
+          <a routerLink="/overview/chat" class="picto-item" aria-label="chat" >
+          <button mat-raised-button type="submit" color="primary" ><mat-icon> chat</mat-icon></button>
+            </a>
+        </div>
 
-      <div mat-dialog-actions>
-        <a routerLink="/overview/profil">
-          <button mat-raised-button type="submit" color="primary">
-            Accédez au Profil
-          </button>
-        </a>
-      </div>
+        <div mat-dialog-actions>
+          <a routerLink="/overview/profil"class="picto-item" aria-label="profil">
+          <button mat-raised-button type="submit" color="primary"><mat-icon>account_circle</mat-icon></button>
+            </a>
+        </div>
     </div>
   </mat-sidenav>
 

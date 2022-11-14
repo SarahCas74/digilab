@@ -63,7 +63,7 @@ this.userService.login(this.user).subscribe((result:UserModel)=>{
     })
 // TODO dans le data Service
 // 2 méthodes, getAvatar, et
-//GetItem pour récupérer l'objet dans le local storage
+// GetItem pour récupérer l'objet dans le local storage
 
 //TODO dans le user ts
     

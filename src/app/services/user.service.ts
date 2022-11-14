@@ -52,7 +52,7 @@ export class UserService {
   //Méhode qui supprime le token pour la déconnexion Log out dans l'overview
   clearToken() {
     localStorage.removeItem('token')
-    this.router.navigate((['/']))
+    this.router.navigate((['/login']))
   }
   //!================FIN TOKEN==============
 

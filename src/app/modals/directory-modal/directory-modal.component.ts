@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { DataserviceService } from 'src/app/services/dataservice.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 export interface DialogData { }
 
@@ -25,12 +26,14 @@ export class DirectoryModalComponent implements OnInit {
   ngOnInit(): void {
     this.directoryForm = this._fb.group({
       nom: ['', Validators.minLength(2)],
-      chemin: ['', [Validators.required, Validators.pattern(this.pathPattern)]],
+      // chemin: ['', [Validators.required, Validators.pattern(this.pathPattern)]],
       description: ['',[Validators.required, Validators.minLength(10)]],
     })
   }
 
-  onNoClick(): void { }
+  onNoClick(): void {
+    this._dialogRef.close()
+   }
 
   onSubmit(): void {
     const form = this.directoryForm.value
